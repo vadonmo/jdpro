@@ -128,7 +128,7 @@ class getJDCookie(object):
                                 pass
                             else:
                                 cookies += i
-                        return
+                        # return # 此时return会导致后面无法获取环境变量的cookie，应以环境变量优先比较好
             else:
                 with open(pwd + 'JDCookies.txt', "w", encoding="utf-8") as f:
                     cks = "#多账号换行，以下示例：（通过正则获取此文件的ck，理论上可以自定义名字标记ck，也可以随意摆放ck）\n账号1【Curtinlv】cookie1;\n账号2【TopStyle】cookie2;"
