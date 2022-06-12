@@ -255,7 +255,7 @@ def query():
            printf(f"\n****** [账号{i}]-{user} ******")
            res=get_bean_data(i,ck)
            if res['code'] != 200:
-           		printf(res['data'])
+                printf(res['data'])
                 continue
            if res['data'][2][1:] != []:
                creat_bean_count(res['data'][3], res['data'][0], res['data'][1], res['data'][2][1:])
